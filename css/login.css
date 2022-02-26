@@ -1,0 +1,116 @@
+*
+{
+    margin: 0;
+    padding: 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+section
+{
+    position: sticky0;
+}
+.container
+{
+   width: 80%;
+   margin: 0 auto;
+   padding: 1%;
+}
+.text-center
+{
+    text-align: center;
+}
+.clearfix{
+    clear: both;
+    float: none;
+}
+.user-validation
+{
+    background-color: #ececec;
+    padding: 4% 0;
+     
+}
+.validation-form
+{
+    width: 43%;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+    background-color: white;
+    border-radius: 15px;
+}
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+
+}
+input[type=password], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+.sci 
+{
+	margin-top: 20px;
+	display: flex;
+}
+.sci li
+{
+	list-style: none;
+}
+.sci li a 
+{
+	display: inline-block;
+    padding: 10px;
+	width: 40px;
+	height: 40px;
+	background: rgb(243, 239, 239);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 20px;
+	text-decoration: none;
+	border-radius: 4px ;
+}
+.sci li a:hover
+{
+	background: rgb(150, 17, 240);
+}
+.sci li a .fa 
+{
+	color: #fff;
+	font-size: 20px;
+} 
+input[type=submit]{
+    background-color: blue;
+    color: white;
+    padding: 12px 20px;
+    border: none ;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover{
+    background-color:rgb(107, 75, 247);
+} 
+@media only screen and (max-width:768px){
+    .user-validation{
+        padding: 20% 0;
+    }
+    .validation-form{
+        width:90%;
+        padding: 5%;
+        margin-bottom: 5%;
+    }
+    iframe{
+        width: 100%;
+    }
+}

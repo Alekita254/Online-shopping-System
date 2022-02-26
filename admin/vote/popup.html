@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-up</title>
+</head>
+<body>
+    <div class="form-pop">
+        <form action="" class="form-container">
+            <h1>Adding a new product</h1>
+            <label for="product-name">Product Name</label>
+            <input type="text"placeholder="Enter the product name"required>
+            <label for="picture">Product Picture</label>
+            <input type="file" name="image[]">
+            <label for="description">Description</label>
+            <input type="text"placeholder="Describe the product">
+            <label for="price">Price</label>
+            <input type="number"placeholder="Ksh. ">
+            <label for="keywords">Category</label>
+            <input type="text"placeholder="select a category">
+            <label for="keywords">Brands</label>
+            <input type="text"placeholder="select a brand">
+            <label for="keywords">Keywords</label>
+            <input type="text"placeholder="the key words">
+
+            <button type="submit"class="btn">Save</button>
+            <button type="submit" class="btn cancel" onclick="closeForm()">Cancel</button>
+        </form>
+    </div>
+</body>
+</html>

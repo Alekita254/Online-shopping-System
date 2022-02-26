@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- this is the start of the header-->
+    <div class="header">
+        <div class="logo">
+            <img src="image/shopping.jpg">
+        </div>
+        <div class="menu">
+            <ul>
+                <li class="menu-item">Dashboard
+                    <img src="icons/buld.ico">
+                </li>
+                <li class="menu-item">Users
+                    <img src="icons/profile.ico">
+                </li>
+                <li class="menu-item">Log-out
+                    <img src="icons/shutdown.ico">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- This is the end of the header-->
+
+    <!-- this is the start of the side panel-->
+    <div class="side-panel"><!--this is for the panel items in the categories-->
+        <div class="items">
+            <ul>
+                <li class="panel-item">product-list
+                <img src="icons/list.ico">
+                </li>
+                <li class="panel-item">orders
+                <img src="icons/lists.ico">
+                </li>
+                <li class="panel-item">maintenance
+                    <img src="icons/maintenance.ico">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--this is the end of the side panel-->
+    <!-- this is the main page of the products-->
+    <div class="products">
+        <div class="head">
+            <h1>Product List </h1>
+        </div>
+        <div class="head-action">
+            <ul>
+                <li class="command">
+                    <button class="open-button" onclick="openForm()">Add New Product</button>
+                    <div class="form-pop" id="myForm">
+                        <form action="" >
+                            <div class="form-container">
+                                <div class="head">
+                                    <h3>Adding a new product</h3>
+                                </div>
+                            <label for="product-name">Product Name</label>
+                            <input type="text"placeholder="Enter the product name"required>
+                            <label for="picture">Product Picture</label>
+                            <input type="file" name="photo">
+                            <label for="description">Description</label>
+                            <input type="text"placeholder="Describe the product">
+                            <label for="price">Price</label>
+                            <input type="number"placeholder="Ksh. ">
+                            </div>
+                            <div class="form-container">
+                                <div class="head">
+                                    <h3>Category</h3>
+                                </div>
+                            <label for="keywords">Category</label>
+                            <input type="text"placeholder="select a category">
+                            <label for="keywords">Brands</label>
+                            <input type="text"placeholder="select a brand">
+                            <label for="keywords">Keywords</label>
+                            <input type="text"placeholder="the key words">
+                
+                            <button type="submit"class="btn">Save</button>                           
+                            <button type="submit" class="btn cancel" onclick="closeForm()">Cancel</button>
+                            </div>
+                       
+                        </form>
+                    </div>
+                </li>
+            </ul>
+            <form action="">
+                <input type="text"placeholder="Search a product">
+            </form>
+        </div>
+        <div class="table-work">
+            <table>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td><img src="" border=3 width=100 height=100></td>
+                    <td>Logo</td>
+                    <td>2000/=</td>
+                    <td>
+                        <div class="edit">
+                            Edit
+                        </div>
+                        <div class="delete">
+                            Delete
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="" border=2 width=100 height=100></td>
+                    <td>Logo</td>
+                    <td>2000/=</td>
+                    <td>
+                        <div class="edit">
+                            Edit
+                        </div>
+                        <div class="delete">
+                            Delete
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- this is the end of the products-->
+    <!--code for the javascript-->
+<script src="javascript/script.js"></script>
+</body>
+</html>

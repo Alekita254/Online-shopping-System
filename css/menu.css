@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(233, 238, 240);
+    font: 14px/20px Arial, San-Serif;
+    color: #555;
+}
+.menu{
+    height: 470px;
+    width: 500px;
+    background: white;
+    margin: 0;
+    padding: 0;
+}
+#menu ul {
+    width: 90%;
+    margin: 0 auto;
+}
+#menu strong {
+    font-weight: bold;
+    border-bottom: double;
+    display: inline-flexbox;
+    text-transform: uppercase;
+}
+#menu ul li {
+    display: inline-block;
+    width: 32%;
+}
+#menu ul li ul{
+    width: 100%;
+}
+
+#menu ul li ul li{
+    display: block;
+}
+#menu ul li ul li a{
+    text-decoration: none;
+    color: black;
+    display: inline-flex;
+    margin: 5px;
+    padding: 0;
+    text-transform: capitalize;    
+}

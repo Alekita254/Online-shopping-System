@@ -1,0 +1,221 @@
+*,body{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+.header{
+    background-color: rgb(224, 156, 245);
+    position: relative;
+    width: 100%;
+    height: 100px;
+}
+.logo
+{
+    float: left;
+    margin-left: 10px;
+    padding: 10px;
+    text-align: center;
+    color: antiquewhite;
+}
+.logo img{
+    height: 70px;
+    width: 150px;
+    border-radius: 10px;
+}
+.menu{
+    position: relative;
+    float: right;
+    margin-left: 15px;
+    padding: 20px;
+    top: 10px;
+}
+.menu .menu-item{
+    list-style: none;
+    float: left;
+    display: flex;
+    margin-left: 10px;
+    padding: 15px;
+    font-size: 18px;
+    bottom: -15px;
+}
+.menu .menu-item:hover{
+    background: rgb(76, 59, 102);
+}
+.side-panel{
+    background: cyan;
+    width: 200px;
+    height: 500px;
+}
+.side-panel .panel-item{
+    padding: 20px;
+    margin: 10px;
+    margin-right: 15px;
+    width: 100%;
+    border: 1px;
+}
+.side-panel .panel-item:hover {
+    background: white;
+}
+.side-panel .panel-item img{
+    margin-left: 10px;
+}
+.main-panel{
+    position: relative;
+    background: whitesmoke;
+    left: 210px;    
+    top: -500px;
+}
+.main-panel .labels{
+    display: block;
+}
+.main-panel .label-box {
+    list-style: none;
+    align-items: center;
+    float: left;
+    padding: 30px;
+    margin: 10px;
+    width: 120px;
+    height: 100px;
+    border-radius: 20px;
+}
+
+.main-panel .label-box:nth-child(even){
+    background: yellowgreen;
+}
+.main-panel .label-box:nth-child(odd){
+    background: indianred;
+}
+.main-panel .label-box label{
+    color: white;
+    text-shadow: 10px;
+    font-weight: bolder;
+}
+.main-panel .label-box span{
+    color: blue;
+}
+/* this is the css for the productss*/
+.products{
+    position: relative;
+    left: 210px;
+    top: -500px;
+    width: 1140px;
+}
+.products .head{
+    color: rgb(248, 6, 6);
+    border-bottom-style: inset;
+}
+.head-action{
+    background: whitesmoke;
+    position: relative;
+}
+.head-action .command{
+    list-style: none;
+
+}
+/* code for the pop-up*/
+.open-button{
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: relative;
+    bottom: 0px;
+ 
+    width: 280px;
+}
+.form-pop{
+    display: none;
+    /*hiding the form by default*/
+    position: relative;
+    bottom: 0;
+    right: 10px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+/*adding style to the form*/
+.form-container{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    background-color: white;
+}
+.form-container input[type=text], .form-container input[type=number]{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+.form-container input[type=text]:focus, .form-container input[type=number]:focus{
+    background-color: #ddd;
+    outline: none;
+}
+/*for the buttons*/
+.form-container .btn{
+    background: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: ponter;
+    width: 50%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+.form-container .cancel{
+    background-color: red;
+}
+.form-container .btn:hover, .open-button:hover{
+    opacity: 1;
+}
+/*the end for the form*/
+.head-action input{
+    padding: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 23px;
+}
+table{
+    border: 1px solid brown;
+    padding: 20px;
+    border-collapse: collapse;
+    width: 100%;
+}
+tr:nth-child(even){
+    background-color: #f2f2f2;    
+}
+tr:hover{
+    background-color: #ddd;
+}
+th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: crimson;
+    color: white;
+}
+td .edit{
+    background: green;
+    padding: 8px;
+    width: 80px;
+    color: white;
+    margin: 5px;
+    cursor: pointer;
+}
+td .edit:hover{
+    background: blue;
+}
+td .delete{
+    background: red;
+    padding: 8px;
+    width: 80px;
+    color: white;
+    cursor: pointer;
+}
+td .delete:hover {
+    background: gray;
+}

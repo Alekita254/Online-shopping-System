@@ -1,0 +1,577 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(233, 238, 240);
+    font: 14px/20px Arial, San-Serif;
+    color: #555;
+}
+header{
+    background: white;
+    width: 100%;
+    height: 90px;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 0.90;
+}
+#logo {
+    display: absolute;
+    margin: 30px;
+    float: left;
+    height: 50px;
+    width: 150px;
+    border-radius: 5%;
+}
+.navpanel{
+    overflow: hidden;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.navpanel .search-box{
+    background:lightgray;
+    width: 350px;
+    height: 40px;
+    margin: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+.navpanel .search-box img{
+    width: 18px;
+}
+.navpanel .search-box input{
+    width: 100%;
+    background: transparent;
+    padding: 0 5px;
+    outline: none;
+    border: 0;
+}
+.navpanel .search-box button{
+    float: left;
+    padding: 6px;
+    margin-left: 20px;
+    background: rgb(245, 209, 5);
+    font-size: 17px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.navpanel a{
+    text-decoration: none;
+    text-align: center;
+}
+.navpanel .panel{
+    float: right;
+    display: block;
+    padding: 14px 18px;
+}
+
+.navpanel .panel .menu-item{
+    float: right;
+    display: flex;
+    margin: 10px;
+    margin-top: -80px;   
+    font-size: 1em;
+    text-decoration: none;
+    padding: 5px 0;
+}
+.navpanel .panel .menu-item:hover {
+    background: lightgray;
+}
+
+.navpanel .panel .menu-item .sub-menu{
+    position: absolute;
+    background: whitesmoke;
+    top: 80px;
+    line-height: 40px;
+    width: 250px;
+    margin: -60px;
+    margin-top: 0;
+    list-style: none;
+    pointer-events: none;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 0.3s;
+    transition-property: transform, opacity;
+}
+.navpanel .panel .menu-item .sub-menu .sub-item{
+    position: relative;
+    padding: 7px 0;
+    cursor: pointer;
+    box-shadow: inset 0px -30px 5px -30px rgba(255, 255, 255, 0.2);
+}
+.navpanel .panel .menu-item .sub-menu .sub-item a{
+    color: black;
+    font-size: 1em;
+    text-decoration: none;
+    margin: 10px;
+    align-items: center;
+    padding: 16px 10px;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+}
+.navpanel .panel .menu-item .sub-menu .sub-item a .butclick{
+    border-bottom: 2px dotted rgb(27, 23, 23);
+    text-transform: uppercase;
+}
+.navpanel .panel .menu-item .sub-menu .sub-item a .butclick:hover{
+    background: orange;
+}
+.navpanel .panel .menu-item .sub-menu .sub-item:hover{
+    background: #4080EF;
+}
+  
+.navpanel .panel .menu-item .sub-menu .sub-item:last-child:hover{
+    border-radius: 0 0 8px 8px;
+    background: rgb(253, 18, 18);
+}
+  
+.navpanel .panel .menu-item .sub-menu .sub-item a img{
+    padding-right: 10px;
+}
+
+.navpanel .panel .menu-item:hover .sub-menu{
+    pointer-events: all;
+    transform: translateY(0);
+    opacity: 1;
+}
+  
+.button_text, 
+.button_icon {
+    display: inline-block;
+    align-items: center;
+    padding:0 10px;
+    color: black;
+    height: 50px;
+}
+.button_icon{
+    font-size: 1.5em;
+    background: transparent;
+}
+/* this is the side css*/
+.sidepanel{
+    background: white;
+    margin-top: 20px;
+    padding-top: 10px;
+    position: relative;
+    left: 20px;
+    width: 250px;
+    height: 470px;
+    border-radius: 5px;
+}
+.sidepanel a{
+    color:black;
+    display: block;
+    width: 100%;
+    line-height: 20px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+
+.sidepanel img{
+    padding-right: 10px;
+}
+.sidepanel a:hover {
+    background: lightgray;
+    color: blue;
+}
+.sidepanel  .menu-category{
+    position: relative;
+    background: whitesmoke;
+    margin-top: 20px;
+    padding-top: 20px;
+    left: 270px;
+    height: 470px;
+    transform: translateY(270px);
+    list-style: none;
+    pointer-events: none;
+    opacity: 0;
+    border-radius: 5px;
+}
+.menu-category .category{
+    position: relative;
+    padding: 7px 0;
+    cursor: pointer;
+}
+.menu-category .category a{
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1em;
+    text-decoration: none;
+    margin: 5px;
+    align-items: center;
+    text-transform: uppercase;
+}
+.menu-category:hover .category{
+    pointer-events: all;
+    transform: translateX(0);
+    opacity: 1;
+}
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+ /* max-width: 1000px; */
+  position: relative;
+  margin: auto;
+  margin-left: 280px;
+  height: 300px;
+  width: 900px;
+  box-sizing: border-box;
+  margin-top: -465px;
+  border-radius: 20px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: 12px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 28px 12px;
+  position: absolute;
+  bottom: 28px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/*this is for the labels*/
+.label{
+    position: relative;
+    color: white;
+    padding: 25px 70px;
+    padding-bottom: 5px;
+    background: #2196F3;
+    top: 210px;
+    left: 30px;
+    margin: 20px;
+    text-decoration: none;
+    
+}
+.label img{
+    padding-right: 10px;
+}
+/*  This is the css for the owl*/
+main{
+    width: 1280px;
+    height: 650px;
+    top: 700px;
+    left: 25px;
+    margin: 10px auto;
+    position: absolute;
+    padding: 5px 0;
+    background: white;
+}
+main header{
+    width: 98%;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    border-bottom: 2px solid #ddd;
+}
+header p span{
+    font-size: 40px;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #555;
+     width: 30px;
+    height: 30px;
+    display: inline-block;
+    line-height: 19px;
+    text-align: center;
+    border-radius: 3px;
+}
+header p span:hover{
+    background: #222;
+    color: white;
+}
+section{
+    width: 98%;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+}
+section::-webkit-scrollbar{
+    display: none;
+}
+section .product{
+    min-width: 24%;
+    height: 90%;
+    background: whitesmoke;
+    margin:  0 20px  0 0;
+    border-radius: 20px;
+    position: relative;
+    left: 0;
+    transition: 0.5s;
+
+}
+picture{
+    width: 100%;
+    height: 70%;
+    padding: 20px;
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+picture img{
+    width: 100%;
+}
+.product .detail,
+.button{
+    width: 90%;
+    /*background: red;*/
+    margin: auto;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    font-size: 20px;
+    color: #444;
+}
+small{color: #555;}
+.product .button a{
+    text-decoration: none;
+    padding: 6px 14px;
+    font-size: 15px;
+    margin: 5px 0 0 20px;
+    display: inline-block;
+    background: #2196F3;
+    color: white;
+}
+.product .button p.star{
+    margin: 5px auto;
+    width: 65%;
+    font-size: 25px;
+    color: #808080;
+}
+.section2{
+    position: relative;
+    width: 1280px;
+    height: 280px;
+    left: 25px;
+    top: 900px;
+    display: flex;
+    background: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.section2 .box{
+    position: relative;
+    width: 620px;
+  /*  height: 450px;
+    top: 900px; 
+    left: 10px; */
+    margin: 10px;
+    background: rgb(216, 238, 241);
+    box-sizing: border-box;
+    display: inline-block;
+}
+.section2 .box .imgBox{
+    position: relative;
+    overflow: hidden;
+}
+.section2 .box .imgBox img{
+    width: 620px;
+    height: 250px;
+    transition: transform 2s;
+}
+.section2 .box:hover .imgBox img{
+    transform: scale(1.2);
+}
+.brand-section{
+    position: relative;
+    width: 1280px;
+    height: 280px;
+    left: 25px;
+    top: 930px;
+    display: flex;
+    background: whitesmoke;
+    flex-direction: row;
+    flex-wrap: wrap;    
+}
+.brand-section header{
+    background: rgb(199, 232, 241);
+    height: 50px;
+}
+.brand-section header h3{
+    text-align: center;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+}
+.brand-section .box{
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin: 10px;
+    background: blueviolet;
+    box-sizing: border-box;
+    display: inline-block;
+    border-radius: 20px;
+}
+.brand-section .box .imgBox{
+    position: relative;
+    overflow: hidden;
+}
+.brand-section .box .imgBox img{
+    width: 220px;
+    height: 220px;
+    border-radius: 20px;
+    transition: transform 2s;
+}
+.brand-section .box:hover .imgBox img{
+    transform: scale(1.2);
+}
+/* this is the css for the footer */
+.email{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background: rgb(43, 36, 36);
+}
+.email .my-logo img{
+    display: absolute;
+    margin: 30px;
+    float: left;
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    background: black;
+}
+.email .newemail{
+
+    left: 50px;
+
+}
+.email .newemail h4{
+    color: lightgray;
+}
+.email .newemail p{
+    font-size: 18px;
+}
+.email .newemail .mailbox{
+    background: lightgray;
+    width: 350px;
+    height: 35px;
+    margin: 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+.email .newemail .mailbox img{
+    width: 20px;
+}
+.email .newemail .mailbox input{
+    width: 100px;
+    background: transparent;
+    padding: 0 5px;
+    outline: none;
+    border: 0;
+}
+.email .newemail .buton_holder{
+    display: flex;
+    justify-content: end;
+    background: blue;
+}
+.email .newemail .buton_holder .btn{
+    height:4rem;
+    width:10rem;
+    line-height:4rem;
+    border-radius: .5rem;
+    font-size: 2rem;
+    color:var(--black);
+    margin-right: .2rem;
+    background: #eee;
+    text-align: center; 
+}
+
